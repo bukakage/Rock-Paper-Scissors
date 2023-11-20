@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+    <div class="card-container">
+      <!-- Cards in the upper row -->
+      <div class="card" onclick="MainFunction('scissor','True')">
+        <div class="card-content">
+          <!-- <img src="images/scissor.jpg" alt="scissor" /> -->
+          <video src="images/kunai.mp4" width="240" height="360" loop muted autoplay></video>
+          <h2 class="card-title">scissor</h2>
+          <p class="card-description">The shuriken user is <span class="green">strong</span> against paper bomb user.
+             But <span class="red">weak</span> against the
+            stone jutsu user.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" onclick="MainFunction('paper', 'False')">
+        <div class="card-content">
+          <!-- <img src="images/paper.jpg" alt="paper" /> -->
+          <video src="images/paper.mp4" width="240" height="360" loop muted autoplay></video>
+          <h2 class="card-title">paper</h2>
+          <p class="card-description">The paper jutsu user is <span class="green">strong</span> against stone jutsu user.
+             But <span class="red">weak</span> against the Shurkien user.</p>
+        </div>
+      </div>
+
+      <div class="card" onclick="MainFunction('stone', '0')">
+        <div class="card-content">
+          <!-- <img src="images/Stone.webp" alt="stone" /> -->
+          <video src="images/last_1.mp4" width="240" height="360" loop muted autoplay></video>
+          <h2 class="card-title">stone</h2>
+          <p class="card-description">The earth jutsu user is <span class="green">strong</span> against shuriken user. 
+            But <span class="red">weak</span> against the
+            Paper bomb jutsu user.
+          </p>
+        </div>
+      </div>
+
+      <!-- Cards in the lower row -->
+      <div class="lower-part">
+      <div class="card" id="chat-container">
+        <div class="card-content"></div>
+      </div>
+
+      <div class="card" id="score">
+        <div class="card-content"></div>
+
+        <div class="card-content">
+            <div class="team" id="computer_score">
+                <span class="team-name">Computer</span>
+                <span class="score">0</span>
+            </div>
+
+            <div class="team" id="user_score">
+                <span class="team-name">User:</span>
+                <span class="score">0</span>
+    
+            </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+    <!-- <div class="main-result" id="result"></div> -->
+  </body>
+</html>

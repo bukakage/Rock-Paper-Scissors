@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Example</title>
+    <style>
+        #chat-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-width: 300px;
+            margin: 20px auto;
+            overflow-y: scroll;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="chat-container"></div>
+
+<script>
+    function addMessage(message, isUser) {
+        var chatContainer = document.getElementById('chat-container');
+        var messageElement = document.createElement('div');
+        messageElement.className = isUser ? 'user-message' : 'bot-message';
+        messageElement.innerHTML = message;
+        chatContainer.appendChild(messageElement);
+        
+        // Scroll to the bottom to show the latest message
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    // Example usage:
+    addMessage("Hello! How can I help you?", false);  // Bot message
+    addMessage("Hi there! I have a question.", true);  // User message
+    addMessage("Sure, what's your question?", false);  // Bot message
+</script>
+
+</body>
+</html>

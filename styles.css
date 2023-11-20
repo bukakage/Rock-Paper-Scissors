@@ -1,0 +1,176 @@
+@media (max-width: 600px) {
+    .card {
+        width: 100%; /* Make cards full width on smaller screens */
+    }
+}
+h1{
+    text-align: center;
+    background-color: white;
+    padding: 0.5rem;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the pseudo-element behind the content */
+    background-image: url('images/background6.png'); /* Your background image URL */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    filter: blur(3px); /* Apply blur effect if needed */
+    -webkit-filter: blur(3px);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+
+   
+}
+
+img{
+    width: 250px;
+    height: auto;
+}
+.sign-box{
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    align-items: center;
+
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Add some basic styling for the card */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+/* Add styling for the card content */
+.card-content {
+    padding: 20px;
+}
+
+/* Style the card title */
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Style the card description */
+.card-description {
+    font-size: 1rem;
+    color: #555;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+.main-result, #result{
+    background-color: white;
+    display: block;
+    padding: 10vh;
+    margin: 5vh;
+    text-align: center;
+}
+#chat-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 300px;
+    margin: 20px auto;
+    overflow-y: scroll;
+    height: 200px;
+    background-color: white;
+}
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+.gray{
+    color: darkgray;
+}
+
+#score {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 300px;
+    margin: 20px auto;
+    height: 200px;
+    background-color: white;
+}
+
+
+.scoreboard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.team {
+    margin-bottom: 20px;
+}
+
+.team-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.score {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.score-button {
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #e74c3c; /* Firework color */
+    border-radius: 50%;
+    animation: explode 2s ease-out;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
